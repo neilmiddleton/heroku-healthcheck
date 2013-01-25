@@ -3,7 +3,7 @@ module DnsChecker
   def check_domains(app)
     domains = api.get_domains(app).body
     if domains.length > 0
-      styled_header("Checking #{app} domains...\n\n")
+      styled_header("Checking #{app} domains...")
       domains.collect{|d| check_domain(d) }
     else
       display("#{app} has no domain names.")

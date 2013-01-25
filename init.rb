@@ -13,6 +13,7 @@ class Heroku::Command::HealthCheck < Heroku::Command::Base
   def index
     validate_arguments!
     Heroku::Command::Status.new.index
+    display("")
     check_domains(app)
   end
 
