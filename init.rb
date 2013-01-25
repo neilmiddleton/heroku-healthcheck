@@ -7,7 +7,7 @@ class Heroku::Command::HealthCheck < Heroku::Command::Base
   def index
     validate_arguments!
     Heroku::Command::Status.new.index
-    DnsChecker.check(app)
+    DnsChecker.new.check(app)
   end
 
 end
