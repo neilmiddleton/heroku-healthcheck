@@ -15,7 +15,7 @@ class Heroku::Command::HealthCheck < Heroku::Command::Base
     display("")
 
     styled_header("Checking processes")
-    Heroku::Command::Ps.send(:index)
+    Heroku::Command::Ps.new.index
 
     display("")
     check_domains(app)
