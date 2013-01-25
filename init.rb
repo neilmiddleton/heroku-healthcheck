@@ -11,7 +11,7 @@ class Heroku::Command::HealthCheck < Heroku::Command::Base
   #
   def index
     validate_arguments!
-    raise Heroku::Command::Base.app.inspect
+    raise app.class.inspect
 
     Heroku::Command::Status.new.index
     display("")
