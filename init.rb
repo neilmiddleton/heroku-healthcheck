@@ -4,7 +4,6 @@ require_relative 'lib/dns_checker.rb'
 
 class Heroku::Command::HealthCheck < Heroku::Command::Base
   include DnsChecker
-
   # healthcheck
   #
   # displays a variety of information about your application that may indicate
@@ -16,7 +15,6 @@ class Heroku::Command::HealthCheck < Heroku::Command::Base
     display("")
 
     styled_header("Checking processes")
-    raise app.inspect
     Heroku::Command::Ps.new.index
 
     display("")
