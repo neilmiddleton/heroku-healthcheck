@@ -23,11 +23,11 @@ module DnsChecker
 
   def parse_results(data)
     if data["state"] == "green"
-      display("#{data["domain"]} - OK\n")
+      display("#{data["domain"]}: OK\n")
     elsif data["state"] == "amber"
-      display("#{data["domain"]} - #{data["comments"]}\n")
+      display("#{data["domain"]}: #{data["comments"]}\n")
     else
-      display("#{data["domain"]} - WARNING - #{data["comments"]}\n")
+      display("#{data["domain"]}: WARNING - #{data["comments"]}\n")
     end
   end
 end
