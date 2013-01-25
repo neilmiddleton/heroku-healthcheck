@@ -11,13 +11,12 @@ class Heroku::Command::HealthCheck < Heroku::Command::Base
   #
   def index
     validate_arguments!
-    raise app.class.inspect
 
     Heroku::Command::Status.new.index
     display("")
 
-    styled_header("Checking processes")
-    Heroku::Command::Ps.new.index
+    # styled_header("Checking processes")
+    # Heroku::Command::Ps.new.index
 
     display("")
     check_domains(app)
