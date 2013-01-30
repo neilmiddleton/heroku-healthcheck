@@ -3,11 +3,13 @@ require 'json'
 require_relative 'lib/dns_checker.rb'
 require_relative 'lib/processes.rb'
 require_relative 'lib/releases.rb'
+require_relative 'lib/log_stats.rb'
 
 class Heroku::Command::HealthCheck < Heroku::Command::Base
   include DnsChecker
   include Processes
   include Releases
+  include LogStats
 
   # healthcheck
   #
@@ -27,6 +29,10 @@ class Heroku::Command::HealthCheck < Heroku::Command::Base
 
     styled_header("Recent Releases")
     get_releases(app)
+    display ""
+
+    styled_header("Analyzing recent log entries")
+    get_log_stats(app)
     display ""
 
   end
