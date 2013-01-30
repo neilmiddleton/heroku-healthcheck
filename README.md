@@ -30,3 +30,9 @@ outputs:
     v31  Deploy e29f821   neil@neilmiddleton.com  2013/01/17 09:35:56
     v30  Deploy 6e46165   neil@neilmiddleton.com  2013/01/16 20:13:40
     v29  Rollback to v27  neil@neilmiddleton.com  2013/01/16 10:47:10
+
+    === Analyzing recent log entries
+    Analyzing 740 requests
+    H errors: 0 (0.0%)
+    R errors: 0 (0.0%)
+    L errors: 0 (0.0%)
