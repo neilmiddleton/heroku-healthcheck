@@ -1,3 +1,5 @@
+require 'net/http'
+
 module DnsChecker
 
   def check_domains(app)
