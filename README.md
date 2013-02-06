@@ -1,8 +1,6 @@
 Heroku HealthCheck
 ==================
 
-NOTE: At the moment, this is only supported with Ruby 1.9.3
-
 Heroku CLI plugin that returns a basic overview of your applications current
 health:
 
