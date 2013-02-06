@@ -1,4 +1,5 @@
 require 'net/http'
+require "heroku/api/vendor/okjson"
 
 module DnsChecker
 
@@ -16,7 +17,7 @@ module DnsChecker
     return if domain["domain"].match /.*.heroku(app).com/
     return if domain["domain"][0] == "*"
     res = Net::HTTP.get_response check_url(domain)
-    parse_results JSON.parse(res.body)
+    parse_results Heroku::API::OkJson.decode(res.body)
   end
 
   def check_url(domain)

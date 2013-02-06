@@ -1,9 +1,8 @@
 require 'uri'
-require 'json'
-require_relative 'lib/dns_checker.rb'
-require_relative 'lib/processes.rb'
-require_relative 'lib/releases.rb'
-require_relative 'lib/log_stats.rb'
+require 'lib/dns_checker.rb'
+require 'lib/processes.rb'
+require 'lib/releases.rb'
+require 'lib/log_stats.rb'
 
 class Heroku::Command::HealthCheck < Heroku::Command::Base
   include DnsChecker
