@@ -1,8 +1,10 @@
+$:.unshift File.expand_path("../lib", __FILE__)
 require 'uri'
-require 'lib/dns_checker.rb'
-require 'lib/processes.rb'
-require 'lib/releases.rb'
-require 'lib/log_stats.rb'
+require 'net/http'
+require 'dns_checker.rb'
+require 'processes.rb'
+require 'releases.rb'
+require 'log_stats.rb'
 
 class Heroku::Command::HealthCheck < Heroku::Command::Base
   include DnsChecker

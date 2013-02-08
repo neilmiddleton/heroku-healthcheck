@@ -1,6 +1,3 @@
-require 'net/http'
-require "heroku/api/vendor/okjson"
-
 module DnsChecker
 
   def check_domains(app)
